@@ -3,22 +3,24 @@ package com.empresa.erp.repository;
 import java.io.Serializable;
 import java.util.List;
 
+import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
 
 import com.empresa.erp.model.Empresa;
 
-public class Empresas implements Serializable {
+public class EmpresaRepository implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
 	private EntityManager manager;
 
-	public Empresas() {
+	public EmpresaRepository() {
 
 	}
 
-	public Empresas(EntityManager manager) {
+	@Inject
+	public EmpresaRepository(EntityManager manager) {
 		this.manager = manager;
 	}
 

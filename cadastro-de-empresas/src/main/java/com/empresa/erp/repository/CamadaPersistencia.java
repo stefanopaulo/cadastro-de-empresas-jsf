@@ -21,8 +21,8 @@ public class CamadaPersistencia {
 		em.getTransaction().begin();
 		
 		//Declarando os repositórios
-		RamoAtividades ramoAtividades = new RamoAtividades(em);
-		Empresas empresas = new Empresas(em);
+		RamoAtividadeRepository ramoAtividades = new RamoAtividadeRepository(em);
+		EmpresaRepository empresas = new EmpresaRepository(em);
 		
 		//Buscando as informações do banco
 		List<RamoAtividade> listaDeRamoAtividades = ramoAtividades.pesquisar("");

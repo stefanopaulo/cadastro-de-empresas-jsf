@@ -3,6 +3,7 @@ package com.empresa.erp.repository;
 import java.io.Serializable;
 import java.util.List;
 
+import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
 import javax.persistence.criteria.CriteriaBuilder;
@@ -11,17 +12,18 @@ import javax.persistence.criteria.Root;
 
 import com.empresa.erp.model.RamoAtividade;
 
-public class RamoAtividades implements Serializable {
+public class RamoAtividadeRepository implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 	
+	@Inject
 	private EntityManager manager;
 
-	public RamoAtividades() {
+	public RamoAtividadeRepository() {
 
 	}
 
-	public RamoAtividades(EntityManager manager) {
+	public RamoAtividadeRepository(EntityManager manager) {
 		this.manager = manager;
 	}
 	
