@@ -1,0 +1,67 @@
+# Compiled class files
+*.class
+
+# Log files
+*.log
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+# Virtual machine crash logs, core dumps, and system files
+hs_err_pid*
+
+# Eclipse files
+.settings/
+.project
+.classpath
+
+# Maven / Gradle directories
+target/
+build/
+
+# IntelliJ IDEA files
+*.iml
+.idea/
+out/
+
+# NetBeans specific
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+nbactions.xml
+nb-configuration.xml
+
+# Generated files
+*.class
+*.war
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+*.swo
+
+# OS generated files
+.DS_Store
+Thumbs.db
+*.~lock.*
+
+# Jetty files
+.jetty/
+
+# PrimeFaces theme cache
+*.primefaces-theme-cache/
+
+# JSF Facelets templates compilation
+*.facelet
+*.faces
