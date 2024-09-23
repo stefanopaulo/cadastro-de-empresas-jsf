@@ -34,29 +34,13 @@
 				<h:commandButton value="Salvar" />
 			</h:panelGrid>
 			
-			<h:dataTable value="#{[0, 0, 0, 0]}">
+			<h:dataTable>
 				<h:column>
 					<f:facet name="header">
 						<h:outputText value="Razão social" />
 					</f:facet>
 					
-					<h:outputText value="Algaworks Softwares, Treinamentos LTDA" />
-				</h:column>
-				
-				<h:column>
-					<f:facet name="header">
-						<h:outputText value="Nome fantasia" />
-					</f:facet>
-					
-					<h:outputText value="Algaworks" />
-				</h:column>
-				
-				<h:column>
-					<f:facet name="header">
-						<h:outputText value="Tipo empresa" />
-					</f:facet>
-					
-					<h:outputText value="LTDA" />
+					<h:outputText value="Algaworks Software, Treinamentos LTDA." />
 				</h:column>
 			</h:dataTable>
 		</h:form>

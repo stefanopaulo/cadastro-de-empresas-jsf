@@ -48,7 +48,7 @@
 						<h:outputText value="Nome fantasia" />
 					</f:facet>
 					
-					<h:outputText value="Algaworks" />
+					<h:outputText value="Algaworks Softwares, Treinamentos LTDA" />
 				</h:column>
 				
 				<h:column>
