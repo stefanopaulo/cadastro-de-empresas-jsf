@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;cadastro-de-empresas/src/main/webapp/GestaoEmpresas.html&apos; to &apos;GestaoEmpresas.xhtml&apos;" description="Rename resource &apos;GestaoEmpresas.html&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/webapp/GestaoEmpresas.html" name="GestaoEmpresas.xhtml" stamp="1727131602113" updateReferences="true"/>
+</session>
