@@ -23,7 +23,7 @@ public class GestaoEmpresasBean implements Serializable {
     }
     
     public String ajuda() {
-    	return "AjudaGestaoEmpresas?faces-redirect=true";
+    	return "";
     }
     
     public Empresa getEmpresa() {
