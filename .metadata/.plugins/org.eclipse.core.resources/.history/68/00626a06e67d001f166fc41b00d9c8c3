@@ -22,7 +22,16 @@ public class GestaoEmpresasBean implements Serializable {
     private List<Empresa> listaEmpresas;
     
     public void todasEmpresas() {
-        listaEmpresas = empresas.todas();
+        if (empresas != null) {
+            listaEmpresas = empresas.todas(); // Inicializa a lista
+            if (listaEmpresas != null) {
+                System.out.println("Empresas carregadas: " + listaEmpresas.size());
+            } else {
+                System.out.println("Nenhuma empresa foi carregada.");
+            }
+        } else {
+            System.out.println("O repositório 'empresas' está nulo!");
+        }
     }
     
     public List<Empresa> getListaEmpresas() {

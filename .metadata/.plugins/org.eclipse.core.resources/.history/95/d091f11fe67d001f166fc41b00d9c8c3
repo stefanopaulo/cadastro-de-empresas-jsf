@@ -1,6 +1,7 @@
 package com.empresa.erp.repository;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.inject.Inject;
@@ -19,6 +20,10 @@ public class Empresas implements Serializable {
 	public Empresas() {
 
 	}
+
+//	public Empresas(EntityManager manager) {
+//		this.manager = manager;
+//	}
 
 	public Empresa porId(Long id) {
 		return manager.find(Empresa.class, id);
