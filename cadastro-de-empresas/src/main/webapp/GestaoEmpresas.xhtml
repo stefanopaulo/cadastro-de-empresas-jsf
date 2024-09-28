@@ -1,125 +1,52 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:h="http://xmlns.jcp.org/jsf/html"
-	xmlns:f="http://xmlns.jcp.org/jsf/core">
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
 <h:head>
+
 	<meta charset="UTF-8" />
-	<title>Gestão de empresas</title>
+	<title>Gestão Empresas</title>
 
 	<h:outputStylesheet library="estilos" name="estilo.css" />
-</h:head>
-<h:body>
 
+	<f:metadata>
+		<f:viewAction action="#{gestaoEmpresasBean.todasEmpresas}" />
+	</f:metadata>
+
+</h:head>
+
+<h:body>
 	<header>
 		<h:graphicImage library="estilos" name="logo.png" />
 	</header>
 
+	<h2>Cadastro de Empresas</h2>
+
 	<div id="conteudo">
-		<h:form>
-			<h:panelGrid columns="2">
-				<h:outputLabel value="Razão social: " for="razaoSocial" />
-				<h:panelGroup>
-					<h:inputText id="razaoSocial"
-						value="#{gestaoEmpresasBean.empresa.razaoSocial}" required="true"
-						label="Razão social" />
 
-					<h:message for="razaoSocial" />
-				</h:panelGroup>
+		<p:dataTable value="#{gestaoEmpresasBean.listaEmpresas}" var="empresa"
+			emptyMessage="Nenhuma informação a ser exibida" rendered="#{not empty gestaoEmpresasBean.listaEmpresas}">
+			<p:column headerText="Razão social">
+				<h:outputText value="#{empresa.razaoSocial}" />
+			</p:column>
 
-				<h:outputLabel value="Nome fantasia: " for="nomeFantasia" />
-				<h:panelGroup>
-					<h:inputText id="nomeFantasia"
-						value="#{gestaoEmpresasBean.empresa.nomeFantasia}" required="true"
-						label="Nome fantasia" />
+			<p:column headerText="Nome fantasia">
+				<h:outputText value="#{empresa.nomeFantasia}" />
+			</p:column>
 
-					<h:message for="nomeFantasia" />
-				</h:panelGroup>
+			<p:column headerText="Tipo empresa">
+				<h:outputText value="#{empresa.tipo}" />
+			</p:column>
 
-				<h:outputLabel value="Tipo empresa: " for="tipo" />
-				<h:panelGroup>
-					<h:selectOneMenu id="tipo"
-						value="#{gestaoEmpresasBean.empresa.tipo}" required="true"
-						label="Tipo empresa">
-						<f:selectItem itemLabel="Selecione..." />
-						<f:selectItems value="#{gestaoEmpresasBean.tiposEmpresa}"
-							var="tipoEmpresa" itemLabel="#{tipoEmpresa.descricao}"
-							itemValue="#{tipoEmpresa}" />
-					</h:selectOneMenu>
+			<p:column headerText="Ramo atividade">
+				<h:outputText value="#{empresa.ramoAtividade.descricao}" />
+			</p:column>
+		</p:dataTable>
 
-					<h:message for="tipo" />
-				</h:panelGroup>
-
-				<h:outputLabel value="CNPJ: " for="cnpj" />
-				<h:panelGroup>
-					<h:inputText id="cnpj" value="#{gestaoEmpresasBean.empresa.cnpj}"
-						label="CNPJ">
-						<f:validateLength minimum="18" maximum="18" />
-					</h:inputText>
-
-					<h:message for="cnpj" />
-				</h:panelGroup>
-
-				<h:outputLabel value="Data fundação: " for="dataFundacao" />
-				<h:panelGroup>
-					<h:inputText id="dataFundacao"
-						value="#{gestaoEmpresasBean.empresa.dataFundacao}"
-						label="Data fundação">
-						<f:convertDateTime pattern="dd/MM/yyyy" />
-					</h:inputText>
-
-					<h:message for="dataFundacao" />
-				</h:panelGroup>
-
-				<h:outputLabel value="Faturamento: " for="faturamento" />
-				<h:panelGroup>
-					<h:inputText id="faturamento"
-						value="#{gestaoEmpresasBean.empresa.faturamento}"
-						label="Faturamento">
-						<f:convertNumber pattern="#,##0.00" />
-						<f:validateDoubleRange minimum="0" />
-					</h:inputText>
-
-					<h:message for="faturamento" />
-				</h:panelGroup>
-
-				<h:outputLabel />
-				<h:commandButton value="Salvar"
-					actionListener="#{gestaoEmpresasBean.salvar}" />
-
-				<h:outputLabel />
-				<h:commandLink value="Ajuda?" action="#{gestaoEmpresasBean.ajuda}" />
-			</h:panelGrid>
-
-			<h:dataTable value="#{[0, 0, 0, 0]}">
-				<h:column>
-					<f:facet name="header">
-						<h:outputText value="Razão social" />
-					</f:facet>
-
-					<h:outputText value="Algaworks Softwares, Treinamentos LTDA" />
-				</h:column>
-
-				<h:column>
-					<f:facet name="header">
-						<h:outputText value="Nome fantasia" />
-					</f:facet>
-
-					<h:outputText value="Algaworks" />
-				</h:column>
-
-				<h:column>
-					<f:facet name="header">
-						<h:outputText value="Tipo empresa" />
-					</f:facet>
-
-					<h:outputText value="LTDA" />
-				</h:column>
-			</h:dataTable>
-		</h:form>
 	</div>
 
-	<footer>Cadastro de empresas desenvolvido com JSF e
-		Primefaces.</footer>
-
+	<footer> Curso online "JSF e PrimeFaces Essencial" </footer>
 </h:body>
+
 </html>

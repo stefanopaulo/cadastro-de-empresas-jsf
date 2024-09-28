@@ -1,7 +1,0 @@
-package com.empresa.erp.model;
-
-import java.io.Serializable;
-
-public class RamoAtividade implements Serializable {
-
-}
