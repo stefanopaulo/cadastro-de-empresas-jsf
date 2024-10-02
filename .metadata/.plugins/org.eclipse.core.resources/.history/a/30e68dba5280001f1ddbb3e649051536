@@ -25,7 +25,7 @@
 
 	<div id="conteudo">
 		<p:dataTable value="#{gestaoEmpresasBean.listaEmpresas}" var="empresa"
-			paginator="true" rows="10" paginatorPosition="bottom"
+			paginator="true" rows="1" paginatorPosition="bottom"
 			emptyMessage="Nenhuma informação a ser exibida" rendered="#{not empty gestaoEmpresasBean.listaEmpresas}">
 			<p:column headerText="Razão social">
 				<h:outputText value="#{empresa.razaoSocial}" />
