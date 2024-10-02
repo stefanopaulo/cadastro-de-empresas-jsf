@@ -1,0 +1,47 @@
+# Ignore diretórios e arquivos gerados pela IDE
+/.idea/
+/*.iml
+/.project
+/.classpath
+/.settings/
+/servers/
+/Servers/
+/.metadata/
+/.vscode/
+
+# Ignore diretórios de compilação
+/target/
+/build/
+/out/
+
+# Ignore logs e relatórios de execução
+*.log
+*.tmp
+hs_err_pid*
+
+# Ignore arquivos de configuração locais
+*.properties
+*.local
+*.env
+.env
+
+# Ignore dependências geradas
+/.mvn/
+/.mvn/wrapper/maven-wrapper.jar
+/.gradle/
+/node_modules/
+
+# Ignore arquivos do Maven
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+
+# Ignore arquivos do sistema operacional
+.DS_Store
+Thumbs.db
+
+# Ignore arquivos de cache
+/.cache/
+/*.swp

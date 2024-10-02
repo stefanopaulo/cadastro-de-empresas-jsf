@@ -1,5 +1,0 @@
-package com.empresa.erp.util;
-
-public class TransacionalInterceptor {
-
-}
