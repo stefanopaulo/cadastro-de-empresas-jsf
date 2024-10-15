@@ -1,0 +1,15 @@
+version: '3.1'
+
+services:
+  db:
+    image: mysql:latest
+    container_name: mysql_container
+    environment:
+      MYSQL_ROOT_PASSWORD: senha123
+      MYSQL_DATABASE: cursojsfprimefaces
+      MYSQL_USER: dblocal
+      MYSQL_PASSWORD: senha123
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./cursojsfprimefaces.sql:/docker-entrypoint-initdb.d/dump.sql
